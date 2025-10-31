@@ -1,23 +1,34 @@
-# 💰 Program Kasir Sederhana (Java)
+# Program Item - Dokumentasi JavaDoc
 
-Program ini dibuat sebagai latihan dasar **pemrograman berorientasi objek (OOP)** menggunakan bahasa **Java**.  
-Fungsinya adalah untuk mencatat daftar barang belanjaan, menghitung total harga, dan menampilkan struk akhir.
-
----
-
-## 🧩 Struktur Program
-Program terdiri dari beberapa class utama:
-
-- **Main.java** → Menjalankan program dan mengatur input dari pengguna.
-- **Kasir.java** → Menyimpan daftar barang dan memiliki fungsi untuk menambah barang serta menampilkan struk.
-- **Item.java** → Representasi dari barang, berisi nama, harga, dan jumlah.
+Program ini merupakan contoh sederhana dari kelas **Item** yang merepresentasikan suatu barang dengan atribut **nama**, **harga**, dan **jumlah**.  
+Program ini dibuat untuk latihan pembuatan dokumentasi menggunakan **JavaDoc** pada mata kuliah *Pemrograman Lanjut*.
 
 ---
 
-## 🚀 Cara Menjalankan Program
+## 📘 Deskripsi Program
+Kelas `Item` menyimpan data barang yang meliputi:
+- `nama` → nama barang
+- `harga` → harga satuan barang
+- `jumlah` → jumlah barang yang dibeli
 
-1. Pastikan kamu sudah menginstal **Java** di komputermu.
-2. Buka terminal (Git Bash / CMD / VS Code Terminal).
-3. Masuk ke folder project, misalnya:
-   ```bash
-   cd Documents/Modul3/Codelab
+Selain itu, terdapat method `getSubtotal()` yang menghitung total harga dari barang berdasarkan harga dan jumlah.
+
+---
+
+## 🧩 Struktur Kelas
+```java
+public class Item {
+    public String nama;
+    public double harga;
+    public int jumlah;
+
+    public Item(String nama, double harga, int jumlah) {
+        this.nama = nama;
+        this.harga = harga;
+        this.jumlah = jumlah;
+    }
+
+    public double getSubtotal() {
+        return harga * jumlah;
+    }
+}
